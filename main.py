@@ -23,7 +23,11 @@ if __name__ == "__main__":
     for x in range(len(nums_raw)):
         numbers.append(int(nums_raw[x]))
 
+    numbers = [0] * 100000
+
     # Main program
+
+    # Initialisations
     cur_max = -1
     cur_2nd_max = -1
 
