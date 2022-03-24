@@ -18,15 +18,21 @@ if __name__ == "__main__":
         numbers.append(int(nums_ln2[x]))
 
     # Main program
-    cur_best = 0
-    a_i_index = -1
-    a_j_index = -1
+    cur_max = -1
+    cur_2nd_max = -1
 
-    # forwards
+    cur_max_ind = -1
+
+    # first find max
     for i in range(len(numbers)):
-        for j in range(len(numbers)):
-            if cur_best < numbers[i] * numbers[j] and i != j:
-                cur_best = numbers[i] * numbers[j]
+        if numbers[i] > cur_max:
+            cur_max = numbers[i]
+            cur_max_ind = i
 
-    print(cur_best)
+    # now find second max
+    for i in range(len(numbers)):
+        if numbers[i] > cur_2nd_max and i != cur_max_ind:
+            cur_2nd_max = numbers[i]
+
+    print(cur_max * cur_2nd_max)
     0
