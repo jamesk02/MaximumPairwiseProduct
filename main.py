@@ -42,6 +42,7 @@ def fast_pairwise(_numbers):
         if numbers[i] > cur_2nd_max and i != cur_max_ind:
             cur_2nd_max = numbers[i]
 
+    # Total TC: O(N) + O(N) = O(N)
     return cur_max * cur_2nd_max
 
 
@@ -93,6 +94,3 @@ if __name__ == "__main__":
             print("Numbers:\n", numbers)
 
             sys.exit(0)
-
-
-    # Total TC: O(N) + O(N) + O(N) = O(N)
