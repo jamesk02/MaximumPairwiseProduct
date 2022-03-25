@@ -48,8 +48,6 @@ def fast_pairwise(_numbers):
 def slow_pairwise(_numbers):
     # Main program
     cur_best = 0
-    a_i_index = -1
-    a_j_index = -1
 
     # forwards
     for i in range(len(numbers)):
